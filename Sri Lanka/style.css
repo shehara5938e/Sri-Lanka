@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --greenbg: #dbffe7;
+    --greenshadow: rgb(87, 170, 124);
+
+    --bluebg: #dbf1ff;
+    --blueshadow: rgb(87, 140, 170);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+    text-transform: capitalize;
+    transition: 1s ease-in-out;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+/*NAvigation Start*//*NAvigation Start*//*NAvigation Start*/
+
+.navigation{
+    position: fixed;
+    display: flex;
+    inset: 20px;
+    backdrop-filter: blur(10px) saturate(200%);
+    -webkit-backdrop-filter: blur(10px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.425);
+    border-radius: 12px;
+    border-radius: 12px;
+    width: 80px;
+    border-radius: 20px;
+    border-left: 10px solid #ffffff00;
+    border-right: 10px solid #ffffff00;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.navigation.active{
+    width: 200px;
+    border-radius: 10px;
+}
+
+/*toggle button Start*/
+.toggle{
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background: #ffffff00;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+/*toggle button End*/
+
+.navigation.active .toggle{
+    border-radius: 10px;
+}
+
+.toggle::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-5px);
+    transition: 1.5s;
+}
+
+.toggle::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(5px);
+    transition: 1.5s;
+}
+
+/*toggle button animation Start*/
+.navigation.active .toggle::before{
+    transform: translateY(0px) rotate(-405deg);
+}
+
+.navigation.active .toggle::after{
+    transform: translateY(0px) rotate(225deg);
+}
+/*toggle button animation End*/
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-radius: 10px;
+    /*background: #fff;*/
+}
+
+.navigation ul li:hover{
+    background: #ffffff;
+    transition: 1s;
+}
+
+.navigation ul li:nth-child(1){
+    top: 20px;
+    margin-bottom: 60px;
+    background: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navigation ul li:hover:not(:first-child) a{
+    color: #000000;
+    transition: 1s;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    padding-top: 3px;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon1 .imglogo{
+    height: 55px;
+    margin: 5px;
+}
+
+.navigation ul li a .icon ion-icon{
+    font-size: 3vh;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 15px;
+    margin-top: 2px;
+    font-size: 2vh;
+    height: 60px;
+    line-height: 55px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li a .title1{
+    position: relative;
+    display: block;
+    padding: 0 15px;
+    margin-top: 5px;
+    color: #000000;
+    font-size: 2.2vh;
+    font-weight: 600;
+    height: 60px;
+    line-height: 55px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/*Navigation End*//*NAvigation Start*//*NAvigation Start*/
+
+/*HomeTitle*//*HomeTitle*//*HomeTitle*//*HomeTitle*/
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding-left: 100px;
+    height: 100vh;
+}
+
+.home .hometitle h1{
+    display: flex;
+    font-size: 40vh;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/*HomeTitle*//*HomeTitle*//*HomeTitle*//*HomeTitle*/
+
+/*About Start*//*About Start*//*About Start*/
+
+.about{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+.about .info{
+    position: absolute;
+    top: 60vh;
+    left: 14vh;
+    font-size: 20px;
+    text-align: justify;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 75vh;
+    height: 35vh;
+    background: #dbffe7;
+    box-shadow: 25px 24px 0px 0px rgb(87, 170, 124);
+    z-index: 1;
+}
+
+.about .info p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.about .info img{
+    position: absolute;
+    left: 123vh;
+    top: -57vh;
+    height: 90vh;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 25px 24px 0px 0px rgb(87, 170, 124);
+}
+
+.pre{
+    position: absolute;
+    top: 1vh;
+    left: 92.5vh;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: #dbffe7;
+    color: #000000;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.pre ion-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+}
+
+.pre:hover{
+    box-shadow: 15px 17px 0px 0px rgb(87, 170, 124);
+}
+
+.next{
+    position: absolute;
+    top: 90vh;
+    left: 92.5vh;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: #dbffe7;
+    color: #000000;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.next ion-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+}
+
+.next:hover{
+    box-shadow: 15px 17px 0px 0px rgb(87, 170, 124);
+}
+
+.about1{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/bgp.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+.about1 .info{
+    position: absolute;
+    top: 60vh;
+    left: 114vh;
+    font-size: 20px;
+    text-align: justify;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 75vh;
+    height: 35vh;
+    background: #dbf1ff;
+    box-shadow: 25px 24px 0px 0px rgb(87, 140, 170);
+    z-index: 1;
+}
+
+.about1 .info p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.about2{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/bgp2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+.about2 .info{
+    position: absolute;
+    top: 60vh;
+    left: 114vh;
+    font-size: 20px;
+    text-align: justify;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 75vh;
+    height: 35vh;
+    background: #fffedb;
+    box-shadow: 25px 24px 0px 0px rgb(170, 169, 87);
+    z-index: 1;
+}
+
+.about2 .info p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.about3{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/bgp3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+.about3 .info{
+    position: absolute;
+    top: 4vh;
+    left: 114vh;
+    font-size: 20px;
+    text-align: justify;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 75vh;
+    height: 35vh;
+    background: #e8dbff;
+    box-shadow: 25px 24px 0px 0px rgb(119, 87, 170);
+    z-index: 1;
+}
+
+.about3 .info p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.about4{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/bgp4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+.about4 .info{
+    position: absolute;
+    top: 60vh;
+    left: 114vh;
+    font-size: 20px;
+    text-align: justify;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 75vh;
+    height: 35vh;
+    background: #dbffe7;
+    box-shadow: 25px 24px 0px 0px rgb(87, 170, 124);
+    z-index: 1;
+}
+
+.about4 .info p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*About End*//*About End*//*About End*/
+
+/*Pictures Start*//*Pictures Start*//*Pictures Start*/
+
+.pictures{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px) saturate(80%);
+    -webkit-backdrop-filter: blur(10px) saturate(80%);
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: cover;
+}
+
+.pictures h1{
+    font-size: 40vh;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25vh;
+}
+
+.pictures .gallery{
+    display: flex;
+    position: absolute;
+    top: 45vh;
+}
+
+.pictures .gallery .card{
+    position: relative;
+    left: 0px;
+    width: 25.31vh;
+    height: 45vh;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    border: 2px solid #ffffff85;
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.616);
+}
+
+.pictures .gallery .card:not(:first-child){
+    margin-left: -45px;
+}
+
+.pictures .gallery .card:hover{
+    transform: translateY(-20vh) scale(170%);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 25px 10px rgb(0, 0, 0);
+} 
+
+.card:hover ~ .card{
+    left: 15vh;
+}
+
+.pictures .gallery .card img{
+    height: 50vh;
+    object-fit: cover;
+}
+
+/*.pre1{
+    position: absolute;
+    top: 1vh;
+    left: 92.5vh;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: #dbffe7;
+    color: #000000;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.pre1 ion-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+}
+
+.pre1:hover{
+    box-shadow: 15px 17px 0px 0px rgb(87, 170, 124);
+}
+
+.next1{
+    position: absolute;
+    top: 92vh;
+    left: 92.5vh;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: #dbffe7;
+    color: #000000;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.next1 ion-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+}
+
+.next1:hover{
+    box-shadow: 15px 17px 0px 0px rgb(87, 170, 124);
+}*/
+
+/*Pictures End*//*Pictures End*//*Pictures End*/
